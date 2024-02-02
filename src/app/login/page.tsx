@@ -16,7 +16,6 @@ function Login() {
   const [providers, setProviders] = useState<Providers | null>(null);
   useEffect(() => {
     getProviders().then((res) => {
-      console.log(res);
       setProviders(res);
     });
   }, []);
