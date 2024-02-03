@@ -79,7 +79,7 @@ const Book = ({ book, isPurchase }: BookProps) => {
         }
       `}</style>
 
-      <div className='flex flex-col m-4 w-[30%]'>
+      <div className='flex flex-col m-4 lg:w-[30%] md:w-[45%]'>
         <a onClick={handlePurchaseClick} className='cursor-pointer shadow-2xl duration-300 hover:translate-y-1 hover:shadow-none h-full bg-slate-100'>
           <Image
             priority

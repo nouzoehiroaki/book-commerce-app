@@ -12,7 +12,7 @@ const PurchasesDetailBook = ({ PurchasesDetailBook }: PurchasesDetailBookprops) 
   return (
     <Link
       href={`/book/${PurchasesDetailBook.id}`}
-      className='cursor-pointer shadow-2xl duration-300 hover:translate-y-1 hover:shadow-none w-[30%] bg-slate-100'
+      className='cursor-pointer shadow-2xl duration-300 hover:translate-y-1 hover:shadow-none lg:w-[30%] md:w-[45%] bg-slate-100'
     >
       <Image
         priority
