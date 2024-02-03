@@ -1,3 +1,11 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+main{
+  margin-left: auto;
+  margin-right: auto;
+}
+.aspect-ratio{
+  aspect-ratio: 16/9;
+}

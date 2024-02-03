@@ -79,19 +79,18 @@ const Book = ({ book, isPurchase }: BookProps) => {
         }
       `}</style>
 
-      <div className='flex flex-col items-center m-4'>
-        <a onClick={handlePurchaseClick} className='cursor-pointer shadow-2xl duration-300 hover:translate-y-1 hover:shadow-none'>
+      <div className='flex flex-col m-4 w-[30%]'>
+        <a onClick={handlePurchaseClick} className='cursor-pointer shadow-2xl duration-300 hover:translate-y-1 hover:shadow-none h-full bg-slate-100'>
           <Image
             priority
             src={book.thumbnail.url}
             alt={book.title}
             width={450}
             height={350}
-            className='rounded-t-md'
+            className='rounded-t-md object-cover aspect-ratio'
           />
-          <div className='px-4 py-4 bg-slate-100 rounded-b-md'>
-            <h2 className='text-lg font-semibold'>{book.title}</h2>
-            <p className='mt-2 text-lg text-slate-600'>この本は○○...</p>
+          <div className='px-4 py-4 rounded-b-md'>
+            <h2 className='text-md font-semibold'>{book.title}</h2>
             <p className='mt-2 text-md text-slate-700'>値段:{book.price}円</p>
           </div>
         </a>
