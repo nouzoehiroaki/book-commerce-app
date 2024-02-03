@@ -54,7 +54,7 @@ const Book = ({ book, isPurchase }: BookProps) => {
   const handlePurchaseConfirm = () => {
     if (!user) {
       setShowModal(false); // モーダルを閉じる
-      router.push('/login');
+      router.push('/api/auth/signin');
     } else {
       //Stripe購入画面へ。購入済みならそのまま本ページへ。
       startCheckout();
