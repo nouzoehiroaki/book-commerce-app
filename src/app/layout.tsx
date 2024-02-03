@@ -2,9 +2,12 @@ import './globals.css';
 
 import type { Metadata } from 'next';
 import { Noto_Sans_JP } from 'next/font/google';
+import { Suspense } from 'react';
 
 import Header from '@/components/layouts/Header/Header';
 import { NextAuthPrivider } from '@/lib/next-auth/provider';
+
+import LoadingSpinner from './loading';
 
 const notoSansJP = Noto_Sans_JP({ weight: '400', subsets: ['latin'] });
 
@@ -23,7 +26,9 @@ export default function RootLayout({
       <body className={notoSansJP.className}>
         <NextAuthPrivider >
           <Header />
-          {children}
+          <Suspense fallback={<LoadingSpinner />}>
+            {children}
+          </Suspense>
         </NextAuthPrivider>
       </body>
     </html>

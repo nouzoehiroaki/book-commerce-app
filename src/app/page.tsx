@@ -10,15 +10,15 @@ export default async function Home() {
   const { contents } = await getAllBooks();
   const session = await getServerSession(nextAuthOptions);
   const user = session?.user as User;
-  let purchasesBookIds: string[];
+  let purchasesBookIds: string[] = [];
   if (user) {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/purchases/${user.id}`
     );
     const purchasesData = await response.json();
-    console.log(purchasesData);
+    //console.log(purchasesData);
     purchasesBookIds = purchasesData.map((puchaseBook: Purchase) => puchaseBook.bookId);
-    console.log(purchasesBookIds);
+    //console.log(purchasesBookIds);
   }
   return (
     <>
